@@ -35,8 +35,10 @@ names(m_sd) <-paste("standard deviation of", features)
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-by_act<- group_by(df,activ)
-summarize(by_act, mean(df))
+df %>%
+  group_by(activ) %>%
+  colMeans %>%
+  print
 
 
 
