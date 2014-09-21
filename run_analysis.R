@@ -17,6 +17,7 @@ x_both <- rbind(x_test, x_train, all =TRUE)
 y_both <- rbind(y_test, y_train, all =TRUE)
 
 names(x_both) <-features
+names(y_both) <-"activ"
 df <- data.frame(y_both, x_both)
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -34,7 +35,8 @@ names(m_sd) <-paste("standard deviation of", features)
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-step5 <-data.table(m_mean, m_sd)
+by_act<- group_by(df,activ)
+summarize(by_act, mean(df))
 
 
 
