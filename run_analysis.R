@@ -35,10 +35,7 @@ names(m_sd) <-paste("standard deviation of", features)
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-df %>%
-  group_by(activ) %>%
-  colMeans %>%
-  print
-
+  step5 <- data.frame(m_mean,m_sd)   
+  write.table(step5,row.name=FALSE,file="./pp.txt") 
 
 
