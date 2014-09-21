@@ -19,18 +19,15 @@ y_both <- rbind(y_test, y_train, all =TRUE)
 names(x_both) <-features
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-m_mean<-sapply(x_both,mean)
+
+m_mean<-sapply(x_both,mean) # was compulsory to use summarize?
 m_sd <- sapply(x_both, sd)
-
-names(m_mean) <-paste("mean of", features) 
-names(m_sd) <-paste("standard deviation of", features) 
-
 
 # 3. Uses descriptive activity names to name the activities in the data set
 
-
-
 # 4. Appropriately labels the data set with descriptive variable names. 
+names(m_mean) <-paste("mean of", features) 
+names(m_sd) <-paste("standard deviation of", features) 
 
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
