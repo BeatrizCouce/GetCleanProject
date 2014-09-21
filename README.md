@@ -1,22 +1,28 @@
----
-title: "README"
-author: "Beatriz Couce"
-date: "21 Setembro 2014"
-output: html_document
----
+This repository shows my in-progress work to solve the Course Project corresponding to the Coursera course:
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+**Getting and Cleaning Data**
 
-```{r}
-summary(cars)
-```
 
-You can also embed plots, for example:
+Full project should containg:
 
-```{r, echo=FALSE}
-plot(cars)
-```
+* README.md file
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+* CodeBook.md file
+
+* run_analysis.R
+
+The script named run_analysis.R has to perform:
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+It took me a lot of time my desire to read all the files, including the ones into the *Inertial Signals* directory (my computer had not memory enough to work with all  of them)
+
+
+At the end I decided to work only with x and y data sets. Too late, I am afraid!!!
+
